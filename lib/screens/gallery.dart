@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:camera_app/database/db_functions.dart';
 import 'package:camera_app/screens/view_pic.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +28,10 @@ class Galley extends StatelessWidget {
               fit: BoxFit.fill,
             ),
             onTap: () {
-              ViewPhoto();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ViewPhoto(
+                        photo: value[index].photo,
+                      )));
             },
             onLongPress: () {
               showDialog(

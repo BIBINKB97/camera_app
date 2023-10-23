@@ -1,33 +1,23 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
-class ViewPhoto extends StatefulWidget {
+class ViewPhoto extends StatelessWidget {
+  final photo;
   const ViewPhoto({
     super.key,
+    this.photo,
   });
 
-  @override
-  State<ViewPhoto> createState() => _ViewPhotoState();
-}
-
-class _ViewPhotoState extends State<ViewPhoto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
         margin: EdgeInsets.all(30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Card(
-              
-            )
-
-
-
-          ],
-        ),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            image: DecorationImage(image: FileImage(File(photo)))),
       ),
     );
   }

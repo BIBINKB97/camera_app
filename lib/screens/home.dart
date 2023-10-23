@@ -1,21 +1,17 @@
-import 'dart:io';
+// ignore_for_file: must_be_immutable
 
+import 'dart:io';
 import 'package:camera_app/database/db_functions.dart';
 import 'package:camera_app/model/data_model.dart';
 import 'package:camera_app/screens/gallery.dart';
 import 'package:flutter/material.dart';
-
 import 'package:image_picker/image_picker.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   File? photo;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,
+          elevation: 0,
           backgroundColor: Colors.amber,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(5))),
