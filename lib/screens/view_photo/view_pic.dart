@@ -1,6 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:photo_view/photo_view.dart';
 
 class ViewPhoto extends StatelessWidget {
   final photo;
@@ -14,10 +14,10 @@ class ViewPhoto extends StatelessWidget {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        margin: EdgeInsets.all(30),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            image: DecorationImage(image: FileImage(File(photo)))),
+        child: PhotoView(
+            minScale: PhotoViewComputedScale.contained,
+            maxScale: PhotoViewComputedScale.covered * 200,
+            imageProvider: FileImage(File(photo))),
       ),
     );
   }
