@@ -3,7 +3,7 @@
 import 'dart:io';
 import 'package:camera_app/database/db_functions.dart';
 import 'package:camera_app/model/data_model.dart';
-import 'package:camera_app/screens/home_screen/widgets/gallery.dart';
+import 'package:camera_app/view/home_screen/widgets/gallery.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 

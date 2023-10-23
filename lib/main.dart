@@ -1,5 +1,5 @@
 import 'package:camera_app/database/db_functions.dart';
-import 'package:camera_app/screens/home_screen/home.dart';
+import 'package:camera_app/view/home_screen/home.dart';
 import 'package:camera_app/model/data_model.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
