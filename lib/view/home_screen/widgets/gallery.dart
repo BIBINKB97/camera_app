@@ -59,7 +59,7 @@ class Galley extends StatelessWidget {
                       actions: [
                         TextButton(
                           onPressed: (() {
-                            yesOrNo(context);
+                            Navigator.of(context).pop();
                             deletePhoto(index);
                           }),
                           child: Text(
@@ -69,7 +69,7 @@ class Galley extends StatelessWidget {
                         ),
                         TextButton(
                             onPressed: (() {
-                              yesOrNo(context);
+                              Navigator.of(context).pop();
                             }),
                             child: Text('No',
                                 style: TextStyle(
@@ -84,9 +84,5 @@ class Galley extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  yesOrNo(BuildContext context) {
-    return Navigator.of(context).pop();
   }
 }

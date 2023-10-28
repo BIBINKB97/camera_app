@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable
 
-import 'dart:io';
 import 'package:camera_app/database/db_functions.dart';
 import 'package:camera_app/model/data_model.dart';
 import 'package:camera_app/view/home_screen/widgets/gallery.dart';
@@ -9,9 +8,6 @@ import 'package:image_picker/image_picker.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
-
-  File? photo;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
